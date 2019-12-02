@@ -19,11 +19,11 @@ namespace Test
 
             var testHowManyPlayersRegistered = new HowManyEventsRegisteredQuery()
             {
-                TypeOfEvent = typeof(PlayerRegisteredEvent)
+                TypeOfEvent = typeof(PlayerHasRegisteredEvent)
             };
 
             //When
-            testRegisteredPlayers.Stream(new IEvent[] { new PlayerRegisteredEvent(), new PlayerRegisteredEvent(), new QuizWasCreatedEvent() });
+            testRegisteredPlayers.Stream(new IEvent[] { new PlayerHasRegisteredEvent(), new PlayerHasRegisteredEvent(), new QuizWasCreatedEvent() });
 
             var result = testRegisteredPlayers.Query(testHowManyPlayersRegistered);
 

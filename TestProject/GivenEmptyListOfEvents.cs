@@ -19,7 +19,7 @@ namespace Test
             var testRegisteredPlayers = new RegisteredEvents();
             var testHowManyPlayersRegistered = new HowManyEventsRegisteredQuery
             {
-                TypeOfEvent = typeof(PlayerRegisteredEvent)
+                TypeOfEvent = typeof(PlayerHasRegisteredEvent)
             };
 
             //When
