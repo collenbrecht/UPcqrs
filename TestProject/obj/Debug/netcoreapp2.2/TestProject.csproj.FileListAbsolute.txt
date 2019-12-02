@@ -1,0 +1,14 @@
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\TestProject.deps.json
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\TestProject.runtimeconfig.json
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\TestProject.runtimeconfig.dev.json
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\TestProject.dll
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\bin\Debug\netcoreapp2.2\TestProject.pdb
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\obj\Debug\netcoreapp2.2\TestProject.csprojAssemblyReference.cache
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\obj\Debug\netcoreapp2.2\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\obj\Debug\netcoreapp2.2\TestProject.AssemblyInfoInputs.cache
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\obj\Debug\netcoreapp2.2\TestProject.AssemblyInfo.cs
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\obj\Debug\netcoreapp2.2\TestProject.dll
+C:\Users\ex03208\Desktop\Opleidingen\CQRS\TestProject\TestProject\obj\Debug\netcoreapp2.2\TestProject.pdb
