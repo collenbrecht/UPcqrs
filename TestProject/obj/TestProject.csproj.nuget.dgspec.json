@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\TestProject.csproj",
+        "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\ex03208\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

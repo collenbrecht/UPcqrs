@@ -1619,6 +1619,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
       }
     }
   },
@@ -5807,10 +5817,16 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Domain >= 1.0.0",
       "MSTest.TestAdapter >= 1.4.0",
       "MSTest.TestFramework >= 1.4.0",
       "Microsoft.NET.Test.Sdk >= 16.0.1",
@@ -5824,11 +5840,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\TestProject.csproj",
-      "projectName": "TestProject",
-      "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\TestProject.csproj",
+      "projectUniqueName": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\Test.csproj",
+      "projectName": "Test",
+      "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\Test.csproj",
       "packagesPath": "C:\\Users\\ex03208\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\TestProject\\obj\\",
+      "outputPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5846,7 +5862,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\Domain\\Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
