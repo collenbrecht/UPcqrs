@@ -16,14 +16,11 @@ namespace Test
         public void ThenNoPlayersRegistered()
         {
             //Given
-            var testRegisteredPlayers = new RegisteredEvents();
-            var testHowManyPlayersRegistered = new HowManyEventsRegisteredQuery
-            {
-                TypeOfEvent = typeof(PlayerHasRegisteredEvent)
-            };
+            var testRegisteredPlayers = new RegisteredPlayers();
+            var testHowManyPlayersRegistered = new HowManyPlayersRegistered();
 
             //When
-            testRegisteredPlayers.Stream(new IEvent[0]);
+            //testRegisteredPlayers.Stream(new IEvent[0]);
 
             var result = testRegisteredPlayers.Query(testHowManyPlayersRegistered);
 

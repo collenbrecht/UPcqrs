@@ -15,15 +15,12 @@ namespace Test
         public void ThenNumberOfRegisteredPlayersIsReturned()
         {
             //Given
-            var testRegisteredPlayers = new RegisteredEvents();
+            var testRegisteredPlayers = new RegisteredPlayers();
 
-            var testHowManyPlayersRegistered = new HowManyEventsRegisteredQuery()
-            {
-                TypeOfEvent = typeof(PlayerHasRegisteredEvent)
-            };
+            var testHowManyPlayersRegistered = new HowManyPlayersRegistered();
 
             //When
-            testRegisteredPlayers.Stream(new IEvent[] { new PlayerHasRegisteredEvent(), new PlayerHasRegisteredEvent(), new QuizWasCreatedEvent() });
+            //testRegisteredPlayers.Stream(new IEvent[] { new PlayerHasRegisteredEvent(), new PlayerHasRegisteredEvent(), new QuizWasCreatedEvent() });
 
             var result = testRegisteredPlayers.Query(testHowManyPlayersRegistered);
 

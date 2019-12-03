@@ -1,4 +1,6 @@
-﻿namespace Domain.Queries
+﻿using System;
+
+namespace Domain.Queries
 {
     public interface IQuery
     {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Test
+namespace Domain.Commands
 {
-    class GivenPlayerHasRegistered
+    public interface ICommand
     {
     }
 }
