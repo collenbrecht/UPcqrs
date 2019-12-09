@@ -16,12 +16,12 @@ namespace Domain
 
     public class MemoryEventStore : EventStore
     {
-        public IEnumerable<IEvent> Events { get; set; }
-        public IEnumerable<Subscriber> Subscribers { get; set; }
-        public IEnumerable<CommandHandler> CommandHandlers { get; set; }
+        public IEnumerable<IEvent> Events { get; set; } = new List<IEvent>();
+        public IEnumerable<Subscriber> Subscribers { get; set; } = new List<Subscriber>();
+        public IEnumerable<CommandHandler> CommandHandlers { get; set; } = new List<CommandHandler>();
         public void SubscribeToAll(Subscriber subscriber)
         {
-            Subscribers.Append(subscriber);
+            Subscribers = Subscribers.Append(subscriber);
         }
 
         public void SubscribeToCommands(CommandHandler commandHandler)

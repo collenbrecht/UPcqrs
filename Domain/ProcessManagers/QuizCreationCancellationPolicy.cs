@@ -33,11 +33,11 @@ namespace Domain.ProcessManagers
                     break;
                 case DayWasPassedEvent e:
                     var quiz = _createdQuizzes.First(x => x.QuizId == e.QuizId);
-                    quiz.NumberOfDays = quiz.NumberOfDays++;
-                    if (quiz.NumberOfDays > 2)
+                    quiz.NumberOfDays++;
+                    if (quiz.NumberOfDays >= 2)
                     {
                         //sendCommand
-                        _commandHandler(new CancelQuizCreationCommand());
+                        _commandHandler.Invoke(new CancelQuizCreationCommand());
                     }
                     break;
                 default:

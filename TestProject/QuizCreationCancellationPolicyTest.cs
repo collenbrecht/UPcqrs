@@ -35,7 +35,7 @@ namespace Test
         [TestMethod]
         public void QuizCancellationPolicy_1_DayWasPassed()
         {
-            Given(new IEvent[]{new QuizWasCreatedEvent()});
+            Given(new IEvent[] { new QuizWasCreatedEvent() });
             When(new DayWasPassedEvent());
             ThenNothing();
         }
@@ -43,8 +43,9 @@ namespace Test
         [TestMethod]
         public void QuizCancellationPolicy_2_DayWasPassed()
         {
-            Given(new IEvent[] { new QuizWasCreatedEvent(), new DayWasPassedEvent() });
-            When(new DayWasPassedEvent());
+            var quizId = Guid.NewGuid();
+            Given(new IEvent[] { new QuizWasCreatedEvent() { QuizId = quizId }, new DayWasPassedEvent() { QuizId = quizId } });
+            When(new DayWasPassedEvent() { QuizId = quizId });
             Then(true);
         }
 
@@ -55,11 +56,12 @@ namespace Test
 
         public void When(IEvent @event)
         {
-            _memoryEventStore.Append(new List<IEvent>{@event});
+            _memoryEventStore.Append(new List<IEvent> { @event });
         }
 
         public void Then(bool handled)
         {
+            _memoryEventStore.Trigger();
             Assert.AreEqual(handled, commandHandled);
         }
 
