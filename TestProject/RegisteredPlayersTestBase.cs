@@ -23,9 +23,9 @@ namespace Test
             _memoryEventStore.SubscribeToAll(Subject.HandleEvent);
         }
 
-        public RegisteredPlayersTestBase Given(IEnumerable<IEvent> events)
+        public RegisteredPlayersTestBase Given(Guid quizId, IEnumerable<IEvent> events)
         { 
-           _memoryEventStore.Append(events.ToList());
+           _memoryEventStore.AppendToStream($"QuizId{quizId}", events.ToList());
            return this;
         }
 

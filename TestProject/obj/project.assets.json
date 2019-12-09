@@ -2371,12 +2371,11 @@
       ]
     },
     "Microsoft.Win32.Registry/4.0.0": {
-      "sha512": "mYUxH/YY9PwvuWY93/qsovFHAh+Lu2CNxNHWxB/x0dnpaEy6oIy/9d7R2J6dFaLZ7jhE7emLjn7A8kSzsP1A+Q==",
+      "sha512": "q+eLtROUAQ3OxYA5mpQrgyFgzLQxIyrfT2eLpYX5IEPlHmIio2nh4F5bgOaQoGOV865kFKZZso9Oq9RlazvXtg==",
       "type": "package",
       "path": "microsoft.win32.registry/4.0.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net46/Microsoft.Win32.Registry.dll",
@@ -3295,12 +3294,11 @@
       ]
     },
     "System.Diagnostics.Process/4.1.0": {
-      "sha512": "4dlFhzwmI3hl32P+8c9hnytYtV7Xldhsokm5i7Fvv5PmTS68TQCfsuJrREIyF9N1B8zlsSomp7AVrXLe45kKFQ==",
+      "sha512": "mpVZ5bnlSs3tTeJ6jYyDJEIa6tavhAd88lxq1zbYhkkCu0Pno2+gHXcvZcoygq2d8JxW3gojXqNJMTAshduqZA==",
       "type": "package",
       "path": "system.diagnostics.process/4.1.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4890,12 +4888,11 @@
       ]
     },
     "System.Runtime.Loader/4.0.0": {
-      "sha512": "/ol/Y9N+MghH5YPeeFuad34s2mclOPJJ4fs2hnFHr04QfGpUSBlcbpp/P3fggCNrZXwVKQEKgHu7SnA43Y8ang==",
+      "sha512": "4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
       "type": "package",
       "path": "system.runtime.loader/4.0.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net462/_._",
@@ -5416,12 +5413,11 @@
       ]
     },
     "System.Threading.Thread/4.0.0": {
-      "sha512": "Tlo/QJ5w4UhgO7Abxz3k9LL/nfQ9/2ioc88cQIMOjNhzK1QGJvvH+A6w5Sx+u99D6lgR+1Nj1YZ9/lknR963kQ==",
+      "sha512": "gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
       "type": "package",
       "path": "system.threading.thread/4.0.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5456,12 +5452,11 @@
       ]
     },
     "System.Threading.ThreadPool/4.0.10": {
-      "sha512": "pA0DnoJ59NlilSdLLwPLKECkTaVF4lbPSM70UqdJQgzJ0r3UHthhlN1T4TmrN6uiXDwPcc2+rI4+5FGtMCdj3g==",
+      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
       "type": "package",
       "path": "system.threading.threadpool/4.0.10",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5743,12 +5738,11 @@
       ]
     },
     "System.Xml.XPath/4.0.1": {
-      "sha512": "ZSggpSPfkWVcxAqXitdespw9f8KdNq2gJX9+BsGHjx0VaOEPgpcsd+03BgSxrymMWIIC08jREfiOp7UE9v2wWA==",
+      "sha512": "UWd1H+1IJ9Wlq5nognZ/XJdyj8qPE4XufBUkAW59ijsCPjZkZe0MUzKKJFBr+ZWBe5Wq1u1d5f2CYgE93uH7DA==",
       "type": "package",
       "path": "system.xml.xpath/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5782,12 +5776,11 @@
       ]
     },
     "System.Xml.XPath.XmlDocument/4.0.1": {
-      "sha512": "gQQaCNO5FYxD37SNQvE+yZUNfCt/Y+FgCnead3hu37RsUiwy2cxqRDWPv+Ee+6DlOeV47xaSYYZ6GQW4EhoEXQ==",
+      "sha512": "Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "type": "package",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5834,23 +5827,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ex03208\\.nuget\\packages\\": {},
+    "C:\\Users\\colle\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\colle\\OneDrive\\Documents\\UniPartners\\Opleidingen\\CQRS\\UPcqrs\\UPcqrs\\TestProject\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\Test.csproj",
-      "packagesPath": "C:\\Users\\ex03208\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\TestProject\\obj\\",
+      "projectPath": "C:\\Users\\colle\\OneDrive\\Documents\\UniPartners\\Opleidingen\\CQRS\\UPcqrs\\UPcqrs\\TestProject\\Test.csproj",
+      "packagesPath": "C:\\Users\\colle\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\colle\\OneDrive\\Documents\\UniPartners\\Opleidingen\\CQRS\\UPcqrs\\UPcqrs\\TestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ex03208\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\colle\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5863,8 +5856,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\ex03208\\Desktop\\Opleidingen\\CQRS\\TestProject\\UPcqrs\\Domain\\Domain.csproj"
+            "C:\\Users\\colle\\OneDrive\\Documents\\UniPartners\\Opleidingen\\CQRS\\UPcqrs\\UPcqrs\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\colle\\OneDrive\\Documents\\UniPartners\\Opleidingen\\CQRS\\UPcqrs\\UPcqrs\\Domain\\Domain.csproj"
             }
           }
         }
@@ -5898,10 +5891,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

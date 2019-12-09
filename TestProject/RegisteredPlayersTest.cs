@@ -1,4 +1,5 @@
-﻿using System.IO.Pipes;
+﻿using System;
+using System.IO.Pipes;
 using Domain.Events;
 using Domain.Queries;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,7 +12,7 @@ namespace Test
         [TestMethod]
         public void NoEvents()
         {
-            Given(new IEvent[]{})
+            Given(Guid.NewGuid(), new IEvent[]{})
                 .When(new HowManyPlayersRegistered())
                 .Then(0);
         }
@@ -19,7 +20,7 @@ namespace Test
         [TestMethod]
         public void PlayerHasRegisteredEvent()
         {
-            Given(new IEvent[] {new QuizWasCreatedEvent()})
+            Given(Guid.NewGuid(), new IEvent[] {new QuizWasCreatedEvent()})
                 .When(new HowManyPlayersRegistered())
                 .Then(0);
         }
@@ -27,7 +28,7 @@ namespace Test
         [TestMethod]
         public void AValidQuiz()
         {
-            Given(new IEvent[] { new PlayerHasRegisteredEvent(), new QuizWasCreatedEvent(), new QuestionAddedToQuiz(), new QuizWasPublished() })
+            Given(Guid.NewGuid(), new IEvent[] { new PlayerHasRegisteredEvent(), new QuizWasCreatedEvent(), new QuestionAddedToQuiz(), new QuizWasPublished() })
                 .When(new HowManyPlayersRegistered())
                 .Then(1);
         }

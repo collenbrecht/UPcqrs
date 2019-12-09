@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.Commands
 {
-    public class CancelQuizCreationCommand : ICommand
+    public class PublishQuizCommand : ICommand
     {
         public Guid QuizId { get; set; }
     }

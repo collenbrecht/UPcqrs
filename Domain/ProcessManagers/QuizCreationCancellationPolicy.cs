@@ -1,54 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Domain.Commands;
 using Domain.Events;
 
 namespace Domain.ProcessManagers
 {
-    public class QuizCreationCancellationPolicy
+    public partial class QuizCreationCancellationPolicy
     {
-        private readonly CommandHandler _commandHandler;
-        private IList<CreatedQuiz> _createdQuizzes = new List<CreatedQuiz>();
+        private readonly QuizUseCases _quizUseCases;
+        private Dictionary<Guid, int> _createdQuizzes = new Dictionary<Guid, int>();
 
-        public QuizCreationCancellationPolicy(CommandHandler commandHandler)
+        public QuizCreationCancellationPolicy(QuizUseCases useCases)
         {
-            _commandHandler = commandHandler;
+            _quizUseCases = useCases;
         }
 
         public void HandleEvent(IEvent @event)
         {
+            Console.WriteLine($"registered {@event.GetType()}");
             switch (@event)
             {
                 case QuizWasCreatedEvent e:
-                    _createdQuizzes.Add(new CreatedQuiz()
-                    {
-                        QuizId = e.QuizId,
-                        NumberOfDays = 0
-                    });
+                    _createdQuizzes.Add(e.QuizId, 0);
                     break;
                 case QuizWasPublished e:
-                    //_createdQuizzes.(x => x.QuizId == e.QuizId); Delete from list
+                    _createdQuizzes.Remove(e.QuizId);
                     break;
                 case DayWasPassedEvent e:
-                    var quiz = _createdQuizzes.First(x => x.QuizId == e.QuizId);
-                    quiz.NumberOfDays++;
-                    if (quiz.NumberOfDays >= 2)
+                    if (++_createdQuizzes[e.QuizId] > 2)
                     {
-                        //sendCommand
-                        _commandHandler.Invoke(new CancelQuizCreationCommand());
+                        _quizUseCases.HandleCommand(new CancelQuizCreationCommand() { QuizId = e.QuizId });
                     }
                     break;
                 default:
                     break;
             }
-        }
-
-        class CreatedQuiz
-        {
-            public Guid QuizId { get; set; }
-            public int NumberOfDays  { get; set; }
         }
     }
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Commands
+namespace Domain.Events
 {
-    public class CancelQuizCreationCommand : ICommand
+    public class QuizWasCancelledEvent : IEvent
     {
         public Guid QuizId { get; set; }
     }
