@@ -19,7 +19,7 @@ namespace Domain
             }
         }
 
-        internal List<IEvent> AddQuestion(Guid quizId, Tuple<string,string> questionAnswer, IList<IEvent> events)
+        internal List<IEvent> AddQuestion(Guid quizId, Tuple<string, string> questionAnswer, IList<IEvent> events)
         {
             if (!events.Any(e => e is QuizWasPublished || e is QuizWasCancelledEvent) && events.Any(e => e is QuizWasCreatedEvent))
             {
@@ -37,7 +37,9 @@ namespace Domain
 
         internal List<IEvent> Publish(Guid quizId, IList<IEvent> events)
         {
-            if(!events.Any(e=>e is QuizWasPublished || e is QuizWasCancelledEvent) && events.Any(e => e is QuestionAddedToQuiz))
+            if (!events.Any(e => e is QuizWasPublished || e is QuizWasCancelledEvent) 
+                && events.Any(e => e is QuestionAddedToQuiz) 
+                && events.Any(e => e is QuizNameApprovedEvent))
             {
                 return new List<IEvent>() { new QuizWasPublished() { QuizId = quizId } };
             }
@@ -49,7 +51,7 @@ namespace Domain
 
         internal List<IEvent> Cancel(Guid quizId, IList<IEvent> events)
         {
-            if (!events.Any(e => e is QuizWasPublished || e is QuizWasCancelledEvent) && events.Any(e=> e is QuizWasCreatedEvent))
+            if (!events.Any(e => e is QuizWasPublished || e is QuizWasCancelledEvent) && events.Any(e => e is QuizWasCreatedEvent))
             {
                 return new List<IEvent>() { new QuizWasCancelledEvent() { QuizId = quizId } };
             }
@@ -57,6 +59,15 @@ namespace Domain
             {
                 return new List<IEvent>();
             }
+        }
+
+        internal List<IEvent> ApproveName(Guid quizId)
+        {
+            return new List<IEvent>() {
+                new QuizNameApprovedEvent() {
+                    QuizId = quizId
+                }
+            };
         }
     }
 

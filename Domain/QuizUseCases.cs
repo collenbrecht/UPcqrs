@@ -1,4 +1,5 @@
-﻿using Domain.Commands;
+﻿using Domain.Aggregates;
+using Domain.Commands;
 using Domain.Events;
 using System;
 using System.Collections.Generic;
@@ -55,7 +56,25 @@ namespace Domain
             Console.WriteLine($"handled {command.GetType()}");
         }
 
+        public void HandleCommand(ReserveQuizNameCommand command)
+        {
+            var streamId = $"QuizNames{command.Name}";
+            var events = EventStore.ReadStreamForward(streamId);
+            var quizNames = new QuizNames();
+            var newEvents = quizNames.ReserveName(command.QuizId, events);
+            EventStore.AppendToStream(streamId, newEvents);
+            Console.WriteLine($"handled {command.GetType()}");
+        }
 
+        public void HandleCommand(ApproveQuizNameCommand command)
+        {
+            var streamId = $"Quiz{command.QuizId}";
+            //var events = EventStore.ReadStreamForward(streamId);
+            var quiz = new Quiz();
+            var newEvents = quiz.ApproveName(command.QuizId);
+            EventStore.AppendToStream(streamId, newEvents);
+            Console.WriteLine($"handled {command.GetType()}");
+        }
 
     }
 }
