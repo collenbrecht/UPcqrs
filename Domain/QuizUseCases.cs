@@ -14,19 +14,23 @@ namespace Domain
         {
             EventStore = store;
         }
-        public void HandleCommand(CancelQuizCreationCommand command)
-        {
-            //get events for quiz and make decision
-            EventStore.AppendToStream($"Quiz{command.QuizId}", new List<IEvent>() { new QuizWasCancelledEvent() { QuizId = command.QuizId } });
-            Console.WriteLine($"handled {command.GetType()}");
-        }
 
         public void HandleCommand(CreateQuizCommand command)
         {
             var streamId = $"Quiz{command.QuizId}";
             var events = EventStore.ReadStreamForward(streamId);
             var quiz = new Quiz();
-            var newEvents = quiz.CreateQuiz(command.QuizId, events);
+            var newEvents = quiz.Create(command.QuizId, events);
+            EventStore.AppendToStream(streamId, newEvents);
+            Console.WriteLine($"handled {command.GetType()}");
+        }
+
+        public void HandleCommand(AddQuestionToQuizCommand command)
+        {
+            var streamId = $"Quiz{command.QuizId}";
+            var events = EventStore.ReadStreamForward(streamId);
+            var quiz = new Quiz();
+            var newEvents = quiz.AddQuestion(command.QuizId, new Tuple<string, string>(command.Question, command.Answer), events);
             EventStore.AppendToStream(streamId, newEvents);
             Console.WriteLine($"handled {command.GetType()}");
         }
@@ -41,12 +45,13 @@ namespace Domain
             Console.WriteLine($"handled {command.GetType()}");
         }
 
-        public void HandleCommand(AddQuestionToQuizCommand command)
+        public void HandleCommand(CancelQuizCreationCommand command)
         {
-            EventStore.AppendToStream($"Quiz{command.QuizId}", new List<IEvent>() { new QuestionAddedToQuiz() { 
-                QuizId = command.QuizId,
-                QuestionAndAnswer = new Tuple<string, string>(command.Question, command.Answer)
-            } });
+            var streamId = $"Quiz{command.QuizId}";
+            var events = EventStore.ReadStreamForward(streamId);
+            var quiz = new Quiz();
+            var newEvents = quiz.Cancel(command.QuizId, events);
+            EventStore.AppendToStream(streamId, newEvents);
             Console.WriteLine($"handled {command.GetType()}");
         }
 

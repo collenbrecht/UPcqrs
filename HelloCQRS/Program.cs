@@ -15,7 +15,7 @@ namespace HelloCQRS
         {
             var startup = new Startup();
             var eventStore = startup.MemoryEventStore;
-            var quizId = InitializeDummyQuiz(eventStore);
+            var quizId = Guid.NewGuid();
             Console.WriteLine("Press 0 to cancel quiz");
             Console.WriteLine("Press 1 to create quiz");
             Console.WriteLine("Press 2 to add Question quiz");
@@ -23,16 +23,15 @@ namespace HelloCQRS
             while (true)
             {
                 var input = Console.ReadLine();
-                int correctKey;
-                if (int.TryParse(input, out correctKey))
+                if (int.TryParse(input, out var correctKey))
                 {
                     switch (correctKey)
                     {
                         case 0:
-                            DoCancelQuiz(quizId, startup);
+                            startup.QuizUseCases.HandleCommand(new CancelQuizCreationCommand { QuizId = quizId });
                             break;
                         case 1:
-                            startup.QuizUseCases.HandleCommand(new CreateQuizCommand() { QuizId = quizId });
+                            startup.QuizUseCases.HandleCommand(new CreateQuizCommand { QuizId = quizId });
                             break;
                         case 2:
                             AddQuestion(quizId, startup);
@@ -67,24 +66,5 @@ namespace HelloCQRS
                 Answer = answer
             });
         }
-
-        private static Guid InitializeDummyQuiz(EventStore eventStore)
-        {
-            var quizId = Guid.NewGuid();
-            eventStore.AppendToStream($"Quiz{quizId}", new List<IEvent>
-            {
-                new QuizWasCreatedEvent { QuizId = quizId },
-                new DayWasPassedEvent { QuizId = quizId },
-                //new DayWasPassedEvent { QuizId = quizId }
-            });
-            ((MemoryEventStore)eventStore).Trigger();
-            return quizId;
-        }
-
-        private static void DoCancelQuiz(Guid quizId, Startup startup)
-        {
-            startup.QuizUseCases.HandleCommand(new CancelQuizCreationCommand() { QuizId = quizId});
-        }
-
     }
 }

@@ -58,7 +58,7 @@ namespace Domain
 
         public List<IEvent> ReadStreamForward(string streamId)
         {
-            return StreamEvents[streamId].ToList();
+            return StreamEvents.ContainsKey(streamId) ? StreamEvents[streamId].ToList() : new List<IEvent>();
         }
     }
 }
